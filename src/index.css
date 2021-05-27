@@ -44,8 +44,7 @@ body {
 .number12 { --rotation: 0deg; }
 
 .hand {
-	--rotation: 30deg;
-	--angleMultiplier: 1;
+	--rotation: 0;
 	position: absolute;
 	bottom: 50%;
 	left: 50%;
@@ -55,21 +54,20 @@ body {
 	border-top-left-radius: 50%;
 	border-top-right-radius: 50%;
 	transform-origin: bottom;
-	transform: translateX(-50%) rotate(calc(var(--rotation) * var(--angleMultiplier)))
+	transform: translateX(-50%) rotate(calc(var(--rotation) * 1deg));
 }
 .hours {
+	--rotation: 0;
 	width: 9px;
 	height: 30%;
-	--angleMultiplier: 1;
 }
 .minutes {
+	--rotation: 30deg;
 	width: 6px;
-	--angleMultiplier: 2;
 }
 .seconds {
 	width: 3px;
 	background-color: red;
-	--angleMultiplier: 3;
 }
 .centralPin {
 	position: absolute;
